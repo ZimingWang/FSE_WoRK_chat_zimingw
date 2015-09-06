@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Chat</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'><!--its related css file is style.css-->
+</head>
+
+<body>
+
+<div id='content'>
+    <div id='room'></div><!--create a "room",but it won't show-->
+    <div id='messages'></div><!--field to show all the messages-->
+    <form id='send-form'><!--form to input the chat words and submit it to the server-->
+        <input id='send-message' />
+        <input id='send-button ' type='submit' value='Send'/>
+    </form>
+    <a href="/Login.html"><input type="button" value="Log out"></input></a><!--button to redirect to the login.html,which means disconnecting and quit the chat-->
+</div>
+<script><!--script to transport the username by location.search,and extract the username from url -->
+    var usernametrans=function() {
+        var parameters = window.location.search.substring(1).split("=");
+        var temp = parameters[1]
+        window.username = decodeURI(temp);
+    }
+    usernametrans();
+</script>
+<script src='/socket.io/socket.io.js' type='text/javascript'></script><!--call or import socket.io-->
+<script src='http://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script><!--call or import the jquery-->
+<script src='/javascripts/chat.js' type='text/javascript'></script><!--call or import the chat.js-->
+<script src='/javascripts/chat_imple.js' type='text/javascript'></script><!--call or import the chat_imple.js-->
+</body>
+</html>

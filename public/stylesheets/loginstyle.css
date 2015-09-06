@@ -1,0 +1,35 @@
+body {
+    padding: 50px;
+    line-height: 1.7em;
+    letter-spacing: 1px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+    background-image:url("../image/loginbackground.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+#content
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h1{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 40px;
+    color: white;
+}
+
+h2{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
+    color: white;
+}
+form{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10px;
+    color: white;
+}
